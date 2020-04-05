@@ -83,7 +83,13 @@ function CreateStudent(props) {
     event.preventDefault();
     const isValid = validate(formState);
     if (isValid) {
-      props.addStudent(formState);
+      props.addStudent({
+        email: formState.email,
+        pwd: formState.pwd,
+        gender: formState.gender,
+        hobby: formState.hobby,
+        country: formState.country,
+      });
       history.push("/");
     }
   };
