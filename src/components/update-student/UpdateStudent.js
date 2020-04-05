@@ -163,23 +163,13 @@ function UpdateStudent(props) {
               className="form-control"
               name="country"
               id="country"
+              value={student.country}
               onChange={updateChangeHandler}
             >
-              <option value="India" selected={student.country === "India"}>
-                India
-              </option>
-              <option value="America" selected={student.country === "America"}>
-                America
-              </option>
-              <option value="Japan" selected={student.country === "Japan"}>
-                Japan
-              </option>
-              <option
-                value="Singapore"
-                selected={student.country === "Singapore"}
-              >
-                Singapore
-              </option>
+              <option value="India">India</option>
+              <option value="America">America</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
             </select>
           </div>
 
