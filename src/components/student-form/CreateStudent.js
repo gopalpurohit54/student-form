@@ -11,7 +11,7 @@ const initialState = {
   rpwd: "",
   gender: "",
   hobby: [],
-  country: "India",
+  country: "",
 };
 
 function CreateStudent(props) {
@@ -73,6 +73,10 @@ function CreateStudent(props) {
     }
     if (formState.hobby.length < 2) {
       setErrorState({ hobbyError: "Please select atleast two hobby." });
+      return false;
+    }
+    if (!formState.country) {
+      setErrorState({ countryError: "Please select a country" });
       return false;
     }
     setErrorState("");
@@ -219,13 +223,15 @@ function CreateStudent(props) {
             className="form-control"
             name="country"
             id="country"
-            onClick={changeHandler}
+            onChange={changeHandler}
           >
+            <option value="">select a country</option>
             <option value="India">India</option>
             <option value="America">America</option>
             <option value="Japan">Japan</option>
             <option value="Singapore">Singapore</option>
           </select>
+          <span>{errorState.countryError}</span>
         </div>
 
         <button type="submit" className="btn btn-default">

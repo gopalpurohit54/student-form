@@ -6,14 +6,11 @@ function NavigationBar(props) {
     <nav className="navbar navbar-inverse">
       <div className="container-fluid">
         <div className="navbar-header">
-          <Link to="/" className=" navbar-brand">
+          <Link to="/" className="  navbar-brand">
             Students
           </Link>
         </div>
         <ul className="nav navbar-nav">
-          <li className="">
-            <Link to="/">List</Link>
-          </li>
           <li>
             <Link to="/create">Create</Link>
           </li>
